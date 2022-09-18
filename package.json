@@ -1,0 +1,22 @@
+{
+  "name": "notify",
+  "version": "1.0.0",
+  "description": "send notifications",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ryan forever",
+  "license": "ISC",
+  "keywords": [
+    "notifications"
+  ],
+  "dependencies": {
+    "@ryanforever/logger": "^5.0.2",
+    "pushover-notifications": "^1.2.2"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.2"
+  },
+  "files": ["src"]
+}
