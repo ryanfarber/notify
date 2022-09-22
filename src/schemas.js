@@ -1,5 +1,8 @@
 // schemas.js
 
+const Logger = require("@ryanforever/logger").v2
+const logger = new Logger("notify", {debug: false})
+const {has} = require("./helpers.js")
 
 // message schema
 function Message(d = {}) {

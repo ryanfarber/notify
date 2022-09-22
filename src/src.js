@@ -17,12 +17,37 @@ function Notify(config = {}) {
 	if (!user) throw new ERROR("MISSING_USER")
 	if (!token) throw new ERROR("MISSING_TOKEN")
 	const push = new Pushover({user, token})
-
-
-	this.send = async function(config = {}) {
+	
+	
+	this.quick = async function(message, config = {}) {
 		logger.debug("sending notification...")
 		let msg = new Message(config)
-		if (appName) msg.title = `[${appName}] ${msg.title}`
+		msg.message = message
+		msg.title = makeTitle(config.title)
+		return await push.send(msg)
+	}
+
+	this.send = async function(message, config = {}) {
+		logger.debug("sending notification...")
+		let msg = new Message(config)
+		msg.message = message
+		msg.title = makeTitle(config.title)
+		return await push.send(msg)
+	}
+
+	this.error = async function(message, config = {}) {
+		logger.debug("sending error notification...")
+		let msg = new Message(config)
+		msg.message = message
+		msg.title = makeTitle("ERROR 🆘")
+		return await push.send(msg)
+	}
+
+	this.warn = async function(message, config = {}) {
+		logger.debug("sending warning notification...")
+		let msg = new Message(config)
+		msg.message = message
+		msg.title = makeTitle("WARN ⚠️")
 		return await push.send(msg)
 	}
 
@@ -42,7 +67,25 @@ function Notify(config = {}) {
 		return await push.send(msg)
 	}
 
+
+	
+	function makeTitle(title) {
+		let output
+		if (appName && title) output = `${appName} - ${title}`
+		else if (!appName && title) output = title
+		else if (appName && !title) output = appName
+		else if (!appName && !title) output = undefined
+		return output
+	}
+
+	const output = this.quick
+	output.send = this.send
+	output.error = this.error
+	output.warn = this.warn
+	output.test = this.test
+	return output
 	EventEmitter.call(this)
+	return this.all
 }
 inherits(Notify, EventEmitter)
 
