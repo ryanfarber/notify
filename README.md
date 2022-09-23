@@ -4,7 +4,7 @@ this is essentially a wrapper for [Pushover](https://www.npmjs.com/package/pusho
 There are a few added functionality
 
 
-# usage
+## usage
 ```javascript
 
 const Notify = require("@ryanforever/notify")
@@ -16,17 +16,17 @@ const notify = new Notify({
 
 
 notify.test() // will send a test notification to all your devices
-
-notify("hello world") // send a simple notification
-notify.error("something went wrong") // send an error notification
-notify.warn("uh oh!")  // send a warning notification
 ```
-
 
 ![notification](https://github.com/ryanfarber/notify/blob/8e87e75d23c535740b3dee38713dcb74af9346df/images/screenshot.png?raw=true)
 
-## additional config
+## other methods
 ```javascript
+notify("hello world") // send a simple notification
+notify.error("something went wrong") // send an error notification
+notify.warn("uh oh!")  // send a warning notification
+
+
 // send with optional config
 notify("this is an alert", {
     url: "https://example.com",
