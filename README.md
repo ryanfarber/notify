@@ -23,7 +23,7 @@ notify.warn("uh oh!")  // send a warning notification
 ```
 
 
-![screenshot of notification]("./images/screenshot.png")
+![screenshot of notification]("/images/screenshot.png")
 
 ## additional config
 ```javascript
