@@ -23,7 +23,7 @@ notify.warn("uh oh!")  // send a warning notification
 ```
 
 
-![notification]("https://github.com/ryanfarber/notify/blob/8e87e75d23c535740b3dee38713dcb74af9346df/images/screenshot.png?raw=true")
+![screenshot of notification]("./images/screenshot.png")
 
 ## additional config
 ```javascript
