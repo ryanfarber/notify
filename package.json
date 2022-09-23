@@ -1,6 +1,6 @@
 {
   "name": "@ryanforever/notify",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "easily send push notifications to your devices",
   "main": "index.js",
   "scripts": {
@@ -18,5 +18,15 @@
   "devDependencies": {
     "dotenv": "^16.0.2"
   },
-  "files": ["src"]
+  "files": [
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryanfarber/notify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ryanfarber/notify/issues"
+  },
+  "homepage": "https://github.com/ryanfarber/notify#readme"
 }

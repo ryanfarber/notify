@@ -1,5 +1,7 @@
 # notify
-easily send push notifications to your devices. uses [Pushover](https://www.npmjs.com/package/pushover-notifications)
+this is essentially a wrapper for [Pushover](https://www.npmjs.com/package/pushover-notifications), which lets you easily send push notifications to your devices.
+
+There are a few added functionality
 
 
 # usage
@@ -14,9 +16,22 @@ const notify = new Notify({
 
 
 notify.test() // will send a test notification to all your devices
+
 notify("hello world") // send a simple notification
 notify.error("something went wrong") // send an error notification
 notify.warn("uh oh!")  // send a warning notification
+
+
+// send with optional config
+notify("this is an alert", {
+    url: "https://example.com",
+    url_title: "website",
+    html: false,
+    sound: "bell.wav",
+    priority: -1,
+    file: "./image.png"
+
+})
 ```
 
-![]("/images/screenshot.png")
+![]("https://github.com/ryanfarber/notify/blob/8e87e75d23c535740b3dee38713dcb74af9346df/images/screenshot.png")
