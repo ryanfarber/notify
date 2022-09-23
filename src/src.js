@@ -3,8 +3,6 @@
 const Logger = require("@ryanforever/logger").v2
 const logger = new Logger("notify", {debug: true})
 const Pushover = require("pushover-notifications")
-const EventEmitter = require("events")
-const {inherits} = require("util")
 const {Message} = require("./schemas.js")
 const ERROR = require("./errors.js")
 const {bold, italic, underline, color, has} = require("./helpers.js")
@@ -17,7 +15,9 @@ function Notify(config = {}) {
 	if (!user) throw new ERROR("MISSING_USER")
 	if (!token) throw new ERROR("MISSING_TOKEN")
 	const push = new Pushover({user, token})
-	
+
+	// this.appName = (name) => appName = name
+
 	
 	this.quick = async function(message, config = {}) {
 		logger.debug("sending notification...")
@@ -71,10 +71,10 @@ function Notify(config = {}) {
 	
 	function makeTitle(title) {
 		let output
-		if (appName && title) output = `${appName} - ${title}`
-		else if (!appName && title) output = title
-		else if (appName && !title) output = appName
-		else if (!appName && !title) output = undefined
+		if (this.appName && title) output = `${appName} - ${title}`
+		else if (!this.appName && title) output = title
+		else if (this.appName && !title) output = appName
+		else if (!this.appName && !title) output = undefined
 		return output
 	}
 
@@ -84,11 +84,8 @@ function Notify(config = {}) {
 	output.warn = this.warn
 	output.test = this.test
 	return output
-	EventEmitter.call(this)
 	return this.all
 }
-inherits(Notify, EventEmitter)
-
 
 
 module.exports = Notify

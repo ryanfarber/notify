@@ -1,7 +1,7 @@
 {
-  "name": "notify",
-  "version": "1.0.0",
-  "description": "send notifications",
+  "name": "@ryanforever/notify",
+  "version": "1.0.1",
+  "description": "easily send push notifications to your devices",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

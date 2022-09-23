@@ -1,13 +1,13 @@
 // test.js
 
 
-require("dotenv").config({path: "../.env"})
+require("dotenv").config()
 
-const Notify = require("./src.js")
+const Notify = require("./src")
 const notify = new Notify({
 	user: process.env.PUSHOVER_USER,
 	token: process.env.PUSHOVER_TOKEN,
-	appName: "botlab"
+	appName: "test"
 })
 
 // notify.test().then(console.log)
@@ -15,6 +15,6 @@ const notify = new Notify({
 // notify("hello")
 
 
-// notify.test()
+notify.test()
 // notify.error("something went wrong")
-notify.warn("booper")
+// notify.warn("booper")
