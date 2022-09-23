@@ -20,8 +20,13 @@ notify.test() // will send a test notification to all your devices
 notify("hello world") // send a simple notification
 notify.error("something went wrong") // send an error notification
 notify.warn("uh oh!")  // send a warning notification
+```
 
 
+![notification]("https://github.com/ryanfarber/notify/blob/8e87e75d23c535740b3dee38713dcb74af9346df/images/screenshot.png")
+
+## additional config
+```javascript
 // send with optional config
 notify("this is an alert", {
     url: "https://example.com",
@@ -30,8 +35,5 @@ notify("this is an alert", {
     sound: "bell.wav",
     priority: -1,
     file: "./image.png"
-
 })
 ```
-
-![]("https://github.com/ryanfarber/notify/blob/8e87e75d23c535740b3dee38713dcb74af9346df/images/screenshot.png")
