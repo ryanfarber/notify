@@ -9,7 +9,12 @@
   "author": "ryan forever",
   "license": "ISC",
   "keywords": [
-    "notifications"
+    "notifications",
+    "ios",
+    "android",
+    "mac os",
+    "push",
+    "alerts"
   ],
   "dependencies": {
     "@ryanforever/logger": "^5.0.2",
@@ -18,15 +23,5 @@
   "devDependencies": {
     "dotenv": "^16.0.2"
   },
-  "files": [
-    "src"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ryanfarber/notify.git"
-  },
-  "bugs": {
-    "url": "https://github.com/ryanfarber/notify/issues"
-  },
-  "homepage": "https://github.com/ryanfarber/notify#readme"
+  "files": ["src"]
 }
