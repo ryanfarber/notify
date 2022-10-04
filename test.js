@@ -14,7 +14,9 @@ const notify = new Notify({
 
 // notify("hello")
 
-
+notify.appName = "booper"
+// let n = notify.instance("booper")
+console.log(notify)
 notify.test()
 // notify.error("something went wrong")
 // notify.warn("booper")
