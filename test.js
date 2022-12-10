@@ -3,7 +3,7 @@
 
 require("dotenv").config()
 
-const Notify = require("./src")
+const Notify = require("./src/base.js")
 const notify = new Notify({
 	user: process.env.PUSHOVER_USER,
 	token: process.env.PUSHOVER_TOKEN,
@@ -17,6 +17,6 @@ const notify = new Notify({
 notify.appName = "booper"
 // let n = notify.instance("booper")
 console.log(notify)
-notify.test()
+notify("hello", {title: "test title"})
 // notify.error("something went wrong")
 // notify.warn("booper")

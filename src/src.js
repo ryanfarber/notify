@@ -96,14 +96,14 @@ function Notify(config = {}) {
 		this.title = title
 		this.message = d.message
 		this.url = d.url
-		this.url_title = d.url_title
+		this.url_title = d.url_title || d.urlTitle
 		this.html = (d.html == true) ? 1 : undefined
 		this.sound = d.sound || undefined
 		this.priority = undefined
 		this.file = d.file
 
 		if (has(d.priority, priorityTypes)) this.priority = d.priority
-		else logger.warn(`priority must be one of [${priorityTypes.join(", ")}]`)
+		// else logger.warn(`priority must be one of [${priorityTypes.join(", ")}]`)
 	}
 
 
