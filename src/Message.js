@@ -15,8 +15,11 @@ class Message {
 		this.html = (config.html) ? 1 : undefined
 		this.sound = config.sound || undefined
 		this.priority = undefined
-		this.file = config.file
+		this.attachment = config.attachment
+		this.attachment_base_64 = config.attachmentBase64 || config.attachment_base_64
 		this.ttl = config.ttl
+		this.device = config.device
+
 
 		if (config.priority) {
 			if (priorityTypes.includes(config.priority)) this.priority = config.priority

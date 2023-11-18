@@ -30,9 +30,22 @@ notify.warn("uh oh!")  // send a warning notification
 ## options
 please refer to [Pushover's Documentation](https://pushover.net/api) for what options you can pass in
 
+```javascript
+
+notify("Check this out", {
+    title: "Wow!",
+    url: "https://example.com"
+})
+```
+
 | key | description |
 | --- | ----------- |
-| title |  your message's title, otherwise your app's name is used |
-| url | a supplementary URL to show with your message |
-|urlTitle | a title for the URL specified as the `url` parameter, otherwise just the URL is shown |
-| html |  set to `true` to enable HTML parsing |
+| title     |  your message's title, otherwise your app's name is used |
+| url       | a supplementary URL to show with your message |
+| urlTitle  | a title for the URL specified as the `url` parameter, otherwise just the URL is shown |
+| html      | set to `true` to enable HTML parsing |
+| ttl       | a number of seconds that the message will live, before being deleted automatically |
+| sound     | the name of a supported sound to override your default sound choice |
+| priority | a value of -2, -1, 0 (default), 1, or 2 |
+| attachment | a binary image attachment to send with the message |
+| attachmentBase64 | a Base64-encoded image attachment to send with the message |
