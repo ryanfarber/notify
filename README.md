@@ -39,7 +39,7 @@ notify("Check this out", {
 ```
 
 | key | description |
-| --- | ----------- |
+| ---: | :---   |
 | title     |  your message's title, otherwise your app's name is used |
 | url       | a supplementary URL to show with your message |
 | urlTitle  | a title for the URL specified as the `url` parameter, otherwise just the URL is shown |
