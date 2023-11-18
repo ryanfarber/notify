@@ -34,7 +34,8 @@ please refer to [Pushover's Documentation](https://pushover.net/api) for what op
 
 notify("Check this out", {
     title: "Wow!",
-    url: "https://example.com"
+    url: "https://example.com",
+    // ...more options below
 })
 ```
 
