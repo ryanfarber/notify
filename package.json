@@ -15,7 +15,9 @@
     "android",
     "mac os",
     "push",
-    "alerts"
+    "alerts",
+    "push notifications",
+    "pushover"
   ],
   "dependencies": {
     "@ryanforever/logger": "^5.0.2",
