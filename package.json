@@ -1,6 +1,6 @@
 {
   "name": "@ryanforever/notify",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "easily send push notifications to your devices",
   "main": "index.js",
   "scripts": {
