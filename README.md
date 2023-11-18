@@ -28,7 +28,11 @@ notify.warn("uh oh!")  // send a warning notification
 ```
 
 ## options
+please refer to [Pushover's Documentation](https://pushover.net/api) for what options you can pass in
 
 | key | description |
 | --- | ----------- |
-| title | optional title for the notification |
+| title |  your message's title, otherwise your app's name is used |
+| url | a supplementary URL to show with your message |
+|urlTitle | a title for the URL specified as the `url` parameter, otherwise just the URL is shown |
+| html |  set to `true` to enable HTML parsing |
