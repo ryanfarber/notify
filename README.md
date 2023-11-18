@@ -12,7 +12,7 @@ const notify = new Notify({
     appName: "test" // optional name to prefix the notification title
 })
 
-notify("hello world")
+notify("Hello! This is a test.")
 ```
 
 ![notification](https://github.com/ryanfarber/notify/blob/8e87e75d23c535740b3dee38713dcb74af9346df/images/screenshot.png?raw=true)
