@@ -4,7 +4,8 @@
   "description": "easily send push notifications to your devices",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm version patch --no-git-tag-version && npm i && npm publish"
   },
   "author": "ryan forever",
   "license": "ISC",
@@ -18,8 +19,7 @@
   ],
   "dependencies": {
     "@ryanforever/logger": "^5.0.2",
-    "axios": "^1.3.2",
-    "pushover-notifications": "^1.2.2"
+    "axios": "^1.6.2"
   },
   "devDependencies": {
     "dotenv": "^16.0.2"

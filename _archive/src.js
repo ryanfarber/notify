@@ -1,11 +1,10 @@
 // src.js
 
 const Logger = require("@ryanforever/logger").v2
-const logger = new Logger("notify", {debug: true})
 const Pushover = require("pushover-notifications")
-// const {Message} = require("./schemas.js")
 const ERROR = require("./errors.js")
 const {bold, italic, underline, color, has} = require("./helpers.js")
+
 
 function Notify(config = {}) {
 
@@ -15,6 +14,8 @@ function Notify(config = {}) {
 	if (!user) throw new ERROR("MISSING_USER")
 	if (!token) throw new ERROR("MISSING_TOKEN")
 	const push = new Pushover({user, token})	
+
+	const logger = new Logger("notify", {debug: config.debug ?? false})
 	this.appName = config.appName
 	
 	let _this = this
@@ -117,6 +118,8 @@ function Notify(config = {}) {
 	return output
 	// return this.all
 }
+
+
 
 
 module.exports = Notify

@@ -1,2 +1,2 @@
 // index.jss
-module.exports = require("./src.js")
+module.exports = require("./Notify.js")
