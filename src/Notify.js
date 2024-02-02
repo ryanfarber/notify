@@ -3,7 +3,7 @@
 const Logger = require("@ryanforever/logger").v2
 const ERROR = require("./Error.js")
 const Message = require("./Message.js")
-const axios = require("axios")
+const Axios = require("axios")
 
 
 function Notify(config = {}) {
@@ -19,8 +19,10 @@ function Notify(config = {}) {
 	
 	let _this = this
 
-	axios.defaults.baseURL = "https://api.pushover.net/1/messages.json"
-	axios.defaults.params = {token, user}
+	const axios = Axios.create({
+		baseURL: "https://api.pushover.net/1/messages.json",
+		params: {token, user}
+	})
 
 
 	this.send = async function(message, config = {}) {
