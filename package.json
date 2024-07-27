@@ -1,11 +1,11 @@
 {
   "name": "@ryanforever/notify",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "easily send push notifications to your devices",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm version patch --no-git-tag-version && npm i && npm publish"
+    "build": "npm i && npm version patch --no-git-tag-version && npm i && git add --all && git commit -m 'auto-build via npm' && git push origin --all && npm publish"
   },
   "author": "ryan forever",
   "license": "ISC",
@@ -20,8 +20,8 @@
     "pushover"
   ],
   "dependencies": {
-    "@ryanforever/logger": "^5.0.2",
-    "axios": "^1.6.2"
+    "@ryanforever/logger": "^6.0.13",
+    "axios": "^1.7.2"
   },
   "devDependencies": {
     "dotenv": "^16.0.2"
